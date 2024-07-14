@@ -1,0 +1,35 @@
+{
+    "name": "codemusk/odoo-api",
+    "description": "Laravel package for interacting with Odoo API using Ripcord",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Abhi Singh",
+            "email": "abhimanevsingh@gmail.com"
+        }
+    ],
+    "require": {
+        "darkaonline/ripcord": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codemusk\\OdooApi\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Codemusk\\OdooApi\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Codemusk\\OdooApi\\OdooApiServiceProvider"
+            ],
+            "aliases": {
+                "OdooApi": "Codemusk\\OdooApi\\Facades\\OdooApi"
+            }
+        }
+    }
+}
